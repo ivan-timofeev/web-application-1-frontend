@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    clear: both;
+    font-family: 'Wix Madefor Display', sans-serif;
+}
+
+@font-face {
+    font-family: 'bebas';
+    src: url('BebasNeue-Regular.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Wix+Madefor+Display:wght@400;700&display=swap');
+
+textarea, input { outline: none; }
+
+a {
+    text-decoration: none;
+}
+.header-container {
+    width: 100vw;
+    padding: 40px 0;
+    max-width:100%;
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    display: flex;
+    justify-content: center;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 1500px;
+}
+.menu {
+    display: flex;
+    align-items: flex-end;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.body {
+    text-align: center;
+    width: 1600px;
+    padding: 30px 20px;
+}
+.logo {
+    align-self: start;
+    color: black;
+    font-family: 'bebas', sans-serif;
+    font-size: 20pt;
+}
+
+
+.categories {
+    margin-top: 10px;
+    display: flex;
+}
+.category {
+    margin-right: 30px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.category-selected {
+    border-bottom: solid black 2px;
+}
+.category:hover {
+    color: gray;
+}
+.category:last-child {
+    margin-right: 0;
+}
+
+.search-input-group {
+    border: solid 1px gray;
+    display: flex;
+    justify-content: space-between;
+}
+.search-input-group-textbox {
+    font-size: large;
+    width: 100%;
+    height: 40px;
+    padding: 5px 15px;
+    border: none;
+
+}
+.search-input-group-button {
+    border: solid 1px black;
+    width: 100px;
+}
+
+.top-brands {
+    margin-top: 100px;
+}
+.top-brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-gap: 20px;
+    justify-content: space-around
+}
+.top-brand {
+    border: solid black;
+    min-width: 150px;
+    min-height: 150px;
+    cursor: pointer;
+}
+
+.top-products {
+    display: flex;
+    flex-direction: column;
+}
+.top-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-gap: 40px;
+    justify-content: space-around;
+}
+.top-product {
+    border: solid black;
+    min-width: 200px;
+    min-height: 200px;
+    cursor: pointer;
+}
+
+
+.section {
+    margin-top: 100px;
+}
+.topic {
+    margin: 40px 0px;
+}
+
+
+.footer {
+    height: 1000px;
+}

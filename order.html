@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Корзина</title>
+</head>
+
+<style>
+    .body {
+        width: 1400px !important;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .flex-column {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left-profile-menu-item {
+        margin-bottom: 5px;
+    }
+
+    .blue-link {
+        color: rgb(48, 48, 248);
+        transition: 0.2s;
+    }
+
+    .black-hover:hover {
+        filter: brightness(75%);
+    }
+
+    .red-link {
+        color: rgb(255, 71, 71);
+        transition: 0.2s;
+    }
+
+    .left-profile-menu {
+        font-size: 0.9em;
+    }
+
+    .left-profile-menu-part {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+
+    .left-profile-menu-link {
+        text-decoration: none;
+        color: black;
+        transition: 0.2s;
+        margin: 7px 0;
+    }
+
+    .left-profile-menu-image {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        margin-bottom: 15px;
+        border-radius: 50%;
+    }
+
+    .hover:hover {
+        color: rgb(173, 179, 192);
+    }
+
+    .left-profile-menu-username {
+        font-size: 1.3em;
+    }
+
+    .space-between {
+        justify-content: space-between;
+    }
+
+    .left {
+    }
+
+    .right {
+        flex-direction: column;
+        margin-left: 70px;
+    }
+
+    .right-inside {
+        border-radius: 5px;
+        padding: 30px;
+        background-color: #f3f3f3;
+        height: fit-content;
+    }
+
+    .flex-grow {
+        flex-shrink: 0;
+        flex-grow: 1;
+    }
+
+    .mini-topic {
+        margin-bottom: 3px;
+    }
+
+    .line-height {
+        line-height: 2em;
+        text-align: left;
+        font-size: 0.9em;
+    }
+
+    .cart {
+        margin-top: 20px;
+        box-shadow: 0px 0px 15px 1px #e9e9e9;
+        border-radius: 4px;
+        padding-left: 50px;
+    }
+
+    .cell {
+        padding: 30px 20px;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    .characteristics {
+        margin-top: 10px;
+    }
+
+    .price-cell {
+        text-align: right;
+    }
+
+    .characteristics th, .characteristics td {
+        padding: 3px 0;
+        padding-right: 8px;
+    }
+
+    .characteristics {
+        font-size: small;
+        color: #6a6a6a;
+    }
+
+    table {
+        border-collapse: collapse;
+        font-size: 0.8em;
+    }
+
+    .head-row {
+        color: gray;
+        font-size: small;
+    }
+
+    .cart-item, .head-row {
+        border-bottom: solid rgb(226, 226, 226) 1px;
+    }
+
+    .image-preview {
+        display: block;
+        background-color: gray;
+        width: 120px;
+
+        margin-bottom: 20px;
+    }
+
+    .hrx {
+        color: black;
+    }
+    
+</style>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header-container">
+        <div class="header">
+            <div class="menu">Меню</div>
+            <a href="/index.html" class="logo">Timofeev</a>
+            <div class="menu">Корзина</div>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="body">
+
+
+        <div class="flex" style="margin-top: 40px;">
+            <div class="left">
+                <div class="left-profile-menu flex flex-column">
+                    <div class="left-profile-menu-part">
+                        <div class="left-profile-menu-item left-profile-menu-image">Image</div>
+                        <div class="left-profile-menu-item left-profile-menu-username"><b>Ivan</b></div>
+                        <div class="left-profile-menu-item left-profile-menu-username"><b>Timofeev</b></div>
+                        <a href="#" class="blue-link black-hover">Изменить профиль</a>
+                    </div>
+
+                    <div class="left-profile-menu-part">
+                        <b class="left-profile-menu-link">Личная информация</b>
+                        <a href="#" class="left-profile-menu-link hover">Мои данные</a>
+                        <a href="#" class="left-profile-menu-link hover">Мои заказы</a>
+                        <a href="#" class="left-profile-menu-link hover">Мои отзывы</a>
+                        <a href="#" class="left-profile-menu-link hover">Мои возвраты</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right flex flex-grow">
+                <div>
+                    <a href="#" class="blue-link black-hover" style="display: flex; margin-bottom: 20px;">К списку заказов</a>
+                    <div style="margin-bottom: 20px;">
+                        <h2 style="text-align: left; margin-bottom: 5px;">Заказ № 25644742-0025</h2>
+                        <div style="font-size: 0.8em; text-align: left;">от 25 марта</div>
+                    </div>
+                </div>
+                <div class="right-inside flex flex-grow">
+                    <div class="flex space-between flex-grow">
+                        <div style="margin-right: 60px;">
+                            <div class="flex flex-column">
+                                <div class="mini-topic"><b>Способ получения</b></div>
+                                <div class="line-height">
+                                    <div>Доставка курьером</div>
+                                    <div style="width: 380px; text-align: left; line-height: 1.4em;">Россия, Москва, улица Плещеева, 10, квартира 54, подъезд 2, код домофона 54*0473, этаж 2</div>
+                                </div>
+                            </div>
+                            <div class="flex flex-column" style="margin-top: 30px;">
+                                <div class="mini-topic"><b>Получатель</b></div>
+                                <div class="line-height">
+                                    <div>Ivan Timofeev</div>
+                                    <div>qwark4media@gmail.com</div>
+                                    <div>+7 977 100 90 35</div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div style="flex-grow: 3;">
+                            <div class="flex flex-column">
+                                <div class="mini-topic"><b>Способ оплаты</b></div>
+                                <div class="flex flex-column line-height" style="width: 100%;">
+                                    <div>Оплата при получении</div>
+                                    <div class="flex space-between" style="width: 80%;">
+                                        <div>Товары</div>
+                                        <div>330 000 ₽</div>
+                                    </div>
+                                    <div class="flex space-between" style="width: 80%;">
+                                        <div>Доставка</div>
+                                        <div>228 ₽</div>
+                                    </div>
+                                    <div class="flex space-between" style="width: 80%;">
+                                        <div><b>Итого</b></div>
+                                        <div><b>330 228 ₽</b></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <div class="flex flex-column" style="margin-right: 40px;">
+                                
+                                <div class="flex flex-column" style="line-height: 2em; text-align: left;">
+                                    <a href="#" class="blue-link black-hover">Чек</a>
+                                    <a href="#" class="blue-link black-hover">Повторить заказ</a>
+                                    <a href="#" class="red-link black-hover">Отменить заказ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="cart">
+                        <table class="cart-table">
+                            <tr class="head-row">
+                                <td class="cell hrc hrx">
+                                    <div class="flex">
+                                        <h2 class="flex">Товары </h2>
+                                        <div style="margin-left: 5px;">(2)</div>
+                                    </div>
+                                </td>
+                                <td class="cell">Наименование товара</td>
+                                <td class="cell">Цена за 1 шт.</td>
+                                <td class="cell">Количество</td>
+                            </tr>
+            
+                            <!-- CART ITEM -->
+                            <tr class="cart-item">
+                                <td class="cell"><img class="image-preview" src="/img/iphone14gray.avif" alt=""></td>
+                                <td class="cell">
+                                    <div>IPhone 14 Pro Max 128 GB, "Space Gray"</div>
+                                    <div>
+                                        <table class="characteristics">
+                                            <tr>
+                                                <td>Артикул</td>
+                                                <td>AA14 ZG641</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Цвет</td>
+                                                <td>Серый</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Память</td>
+                                                <td>128 ГБ</td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </td>
+                                <td class="cell price-cell">165 000 руб.</td>
+                                <td class="cell price-cell">1 шт.</td>
+                            </tr>
+            
+                            <!-- CART ITEM -->
+                            <tr class="cart-item">
+                                <td class="cell"><img class="image-preview" src="/img/iphone14gray.avif" alt=""></td>
+                                <td class="cell">
+                                    <div>IPhone 14 Pro Max 256 GB, "Space Gray"</div>
+                                    <div>
+                                        <table class="characteristics">
+                                            <tr>
+                                                <td>Артикул</td>
+                                                <td>AZ14 XV121</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Цвет</td>
+                                                <td>Серый</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Память</td>
+                                                <td>256 ГБ</td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </td>
+                                <td class="cell price-cell">165 000 руб.</td>
+                                <td class="cell price-cell">1 шт.</td>
+                            </tr>
+            
+                        </table>            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>TIMOFEEV</title>
+</head>
+
+<style>
+
+    p {
+        margin-top: 12px;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .main-image {
+        display: block;
+        width: 400px;
+        margin-left: 50px;
+    }
+
+    .image-preview {
+        display: block;
+        background-color: gray;
+        width: 60px;
+
+        margin-bottom: 20px;
+    }
+
+    .product-description {
+        text-align: left;
+        margin-left: 50px;
+    }
+
+    .product-price {
+        margin-top: 40px;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .characteristics {
+        margin-top: 20px;
+    }
+
+
+    .product-full-decription {
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .description-text {
+        margin-top: 50px;
+        text-align: justify;
+        line-height: 18pt;
+    }
+
+    .myButton {
+    margin-top: 20px;
+	box-shadow: 0px 10px 14px -7px #6a6a6a;
+	background-color:#77b55a;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	padding:15px 30px;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+.myButton:hover {
+	background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+    opacity: 0.9;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+td {
+    padding: 0 15px 8px 0;
+}
+        
+</style>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header-container">
+        <div class="header">
+            <div class="menu">Меню</div>
+            <a href="/index.html" class="logo">Timofeev</a>
+            <div class="menu">Корзина</div>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="body">
+
+        <div class="categories">
+            <div class="category category-selected">Смартфоны</div>
+            <div class="category">Ноутбуки</div>
+        </div>
+
+
+        <div class="flex section">
+            <div class="images-preview">
+                
+                <img class="image-preview" src="/img/iphone14gray.avif" alt="">
+                <img class="image-preview" src="/img/iphone14gray.avif" alt="">
+                <img class="image-preview" src="/img/iphone14gray.avif" alt="">
+                <img class="image-preview" src="/img/iphone14gray.avif" alt="">
+            </div>
+            
+            <div>
+                <img class="main-image" src="/img/iphone14gray.avif">
+            </div>
+
+            <div class="product-description">
+                <div><h2>IPhone 14 Pro Max</h2></div>
+
+                <table class="characteristics">
+                    <tr>
+                        <td>Артикул</td>
+                        <td>AA14 ZG641</td>
+                    </tr>
+                    <tr>
+                        <td>Цвет</td>
+                        <td>Серый</td>
+                    </tr>
+                    <tr>
+                        <td>Память</td>
+                        <td>128 ГБ</td>
+                    </tr>
+                </table>
+
+
+                <div class="product-price">
+                    <span>165</span>
+                    <span>000</span>
+                    <span>руб.</span>
+                </div>
+                <button class="myButton">Добавить в корзину</button>
+            </div>
+        </div>
+
+        <div class="product-full-decription">
+            <div><h2>Описание товара</h2></div>
+            <div class="description-text">iPhone 14 Pro Max — смартфон в корпусе цвета Deep Purple, выполненном из нержавеющей стали и противоударного стекла Ceramic Shield, обладает встроенной памятью 128 Гб. Благодаря классу защиты от воды и пыли IP68 устройство не пострадает при погружении на глубину до 6 м. Экран типа Super Retina XDR Pro Motion диагональю 6,7 дюйма сделан по технологии OLED.
+                <p>Эта модель оборудована тремя основными и одной фронтальной камерой. Основной объектив защищен от повреждений сапфировым стеклом. Модули позволяют записывать видео в качестве 4К, фотографировать с 15-кратным приближением и двукратным удалением. Питание обеспечивает литий-ионный аккумулятор, подпитывать его можно через компьютер, сетевой адаптер или при помощи док-станции MagSafe с функцией Qi. Ресурса батареи хватает на 29 часов просмотра видеоконтента и 95 часов прослушивания музыки.
+                <p>За производительность отвечает шестиядерный процессор A16 Bionic. Девайс снабжен слотом для SIM-карты формата nano. Он поддерживает все существующие мобильные стандарты (в том числе 5G). Устройство обладает модулями беспроводной передачи данных NFC, Bluetooth 5.3 и Wi-Fi. Размеры смартфона — 160,7х77,6х7,85 см, вес — 240 г.</div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+    </div>
+
+</body>
+</html>

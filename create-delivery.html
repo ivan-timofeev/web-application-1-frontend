@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Оформить заказ</title>
+</head>
+
+<style>
+
+    p {
+        margin-top: 12px;
+    }
+
+    .cart {
+        display: flex;
+    }
+
+    .cart-table {
+        width: 100%;
+        font-size: 0.8em;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .main-image {
+        display: block;
+        width: 400px;
+        margin-left: 50px;
+    }
+
+    .image-preview {
+        display: block;
+        background-color: gray;
+        width: 120px;
+
+        margin-bottom: 20px;
+    }
+
+    .product-description {
+        text-align: left;
+        margin-left: 50px;
+    }
+
+    .product-price {
+        margin-top: 40px;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .characteristics {
+        margin-top: 20px;
+    }
+
+
+    .product-full-decription {
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .description-text {
+        margin-top: 50px;
+        text-align: justify;
+        line-height: 18pt;
+    }
+
+    .myButton {
+    margin-top: 20px;
+	box-shadow: 0px 10px 14px -7px #6a6a6a;
+	background-color:#77b55a;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	padding:15px 30px;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+.myButton:hover {
+	background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+    opacity: 0.9;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.cell {
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.price-cell {
+    text-align: right;
+    width: 1%;
+    white-space: nowrap;
+}
+
+.characteristics th, .characteristics td {
+    padding: 3px 0;
+    padding-right: 8px;
+}
+
+.characteristics {
+    font-size: small;
+    color: #6a6a6a;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.head-row {
+    color: gray;
+    font-size: small;
+}
+
+.cart-item, .head-row {
+    border-bottom: solid rgb(226, 226, 226) 1px;
+}
+
+.end-price {
+    font-weight: bold;
+}
+
+.ctr {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buy-block {
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 40px;
+    background-color: rgb(243, 242, 242);
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.left {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 2px;
+    display: flex;
+    margin-right: 8px;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.grow {
+    flex-shrink: 0;
+    flex-grow: 1;
+    margin-bottom: 0px !important;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+.body {
+    width: 1300px !important;
+}
+
+
+
+
+.right {
+    display: flex;
+    text-align: left;
+}
+
+h3 {
+    margin-bottom: 22px;
+}
+
+.delivery-block {
+    margin-bottom: 8px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 2px;
+}
+
+.form-group {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+}
+
+.delivery-button {
+    display: flex;
+    flex-wrap: wrap;
+	border: none;
+	cursor:pointer;
+	font-size:15px;
+	padding:15px 30px;
+    background-color: #ececec;
+    margin-right: 20px;
+}
+
+.selected-button {
+    box-shadow: 0px 0px 15px -5px #6a6a6a;
+    background-color: rgb(255, 255, 255);
+}
+
+.create-delivery {
+    display: flex;
+}
+
+.textbox {
+    border: solid 1px gray;
+    display: flex;
+    padding: 10px 12px;
+    margin-top: 4px;
+}
+
+.header-container {
+    background-color: #ffffff;
+}
+        
+</style>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header-container">
+        <div class="header">
+            <div class="menu">Меню</div>
+            <a href="/index.html" class="logo">Timofeev</a>
+            <div class="menu">Корзина</div>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="body">
+
+        
+        <h2 class="topic">Оформить заказ</h2>
+
+        <div class="create-delivery">
+
+            <div class="left">
+                <h3 style="text-align: left; margin-left: 10px;">Состав заказа</h3>
+                <div class="cart">
+                    <table class="cart-table">
+                            <tr class="head-row">
+                                <td class="cell">Наименование товара</td>
+                                <td class="cell">Цена за 1 шт.</td>
+                                <td class="cell">Количество</td>
+                            </tr>
+            
+                            <!-- CART ITEM -->
+                            <tr class="cart-item">
+                                <td class="cell">
+                                    <div>IPhone 14 Pro Max 228 GB, "Space Gray"</div>
+                                    <div>
+                                        <table class="characteristics">
+                                            <tr>
+                                                <td>Артикул</td>
+                                                <td>AA14 ZG641</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Цвет</td>
+                                                <td>Серый</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Память</td>
+                                                <td>128 ГБ</td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </td>
+                                <td class="cell price-cell">165 000 руб.</td>
+                                <td class="cell price-cell">1 шт.</td>
+                            </tr>
+            
+                            <!-- CART ITEM -->
+                            <tr class="cart-item">
+                                <td class="cell">
+                                    <div>IPhone 14 Pro Max 256 GB, "Space Gray"</div>
+                                    <div>
+                                        <table class="characteristics">
+                                            <tr>
+                                                <td>Артикул</td>
+                                                <td>AZ14 XV121</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Цвет</td>
+                                                <td>Серый</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Память</td>
+                                                <td>256 ГБ</td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </td>
+                                <td class="cell price-cell">165 000 руб.</td>
+                                <td class="cell price-cell">1 шт.</td>
+                            </tr>
+            
+                    </table>   
+                </div>
+                <div style="align-self: flex-end; margin-top: 20px;">Итого 330 000 руб.</div> 
+            </div>
+
+            <div class="right">
+                <div>
+                    <div class="delivery-block">
+                        <h3>Данные покупателя</h3>
+                        <div class="form-group">
+                            <span>
+                                <label>Есть учетная запись?</label>
+                                <a style="margin-top: 10px" href="#">Войти</a>
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>Номер телефона</label>
+                            <input type="text" class="textbox">
+                        </div>
+                        <div class="form-group">
+                            <label>Email (опционально)</label>
+                            <input type="text" class="textbox">
+                        </div>
+                    </div>
+                    <div class="delivery-block">
+                        <h3>Способ получения</h3>
+                        <div class="form-group">
+                            <div style="display: flex;">
+                                <a class="delivery-button selected-button">Самовывоз</a>
+                                <a class="delivery-button">Доставка</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-block grow">
+                        <h3>Оплата</h3>
+                        <div class="form-group">
+                            <div style="display: flex;">
+                                <a class="delivery-button selected-button">При получении</a>
+                                <a class="delivery-button">Онлайн</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end;">
+            <a href="/order.html" class="myButton" style="width: 300px; margin-right: 20px;">Подтвердить заказ</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+    </div>
+
+</body>
+</html>
